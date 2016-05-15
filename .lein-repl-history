@@ -1,0 +1,315 @@
+(in-ns 'nedabase.parsing-methods)
+example-entry
+(in-ns 'nedabase.core)
+example-entry
+parse/example-entry
+(in-ns 'nedabase.parsing-methods)
+(split example-entry
+)
+(defn fizzbuzz
+  [num]
+  (loop [i 1]
+    (while (< i num)
+      (if (= 0 (rem i 3) (rem i 5))
+        (println "fizzbuzz")
+        (recur (inc i))))))
+(defn fizzbuzz
+  [num]
+  (loop [i 1]
+    (while (< i num)
+      "test"
+      (recur (inc i)))))
+(defn fizzbuzz
+  [num]
+  (loop [i 1]
+    (when (< i num)
+      (println i)
+      (recur (inc i)))))
+(defn fizzbuzz
+  [num]
+  (loop [i 1]
+    (when (< i num)
+      (if (= 0 (rem i 3) (rem i 5))
+        (println "fizzbuzz")
+        (recur (inc i)))))
+)
+(defn print-fizzbuzz
+  [i]
+  (println i))
+(defn fizzbuzz
+  [num]
+  (loop [i 1]
+    (when (< i num)
+      (print-fizzbuzz i)
+      (recur (inc i))))))
+(fizzbuzz 5)
+(require [clojure.logic :as log])
+exit
+(fizzbuzz 32)
+(defn printfizzbuzz
+  [i]
+  (println i))
+(printfizzbuzz 4)
+(defn fizzbuzz
+  [num]
+  (loop [i 1]
+    (when (<= i num)
+      (printfizzbuzz i)
+      (recur (inc i)))))
+(fizzbuzz 3)
+(fizzbuzz 32)
+(defn printfizzbuzz
+  [i]
+  (cond
+    (= 0 (rem i 5) (rem i 3)) "fizzbuzz"
+    (= 0 (rem i 3)) "fizz"
+    (= 0 (rem i 5)) "buzz"
+    :else (println i)))
+(fizzbuzz 32)
+(defn printfizzbuzz
+  [i]
+  (cond
+    (= 0 (rem i 5) (rem i 3)) (println "fizzbuzz")
+    (= 0 (rem i 3)) (println "fizz")
+    (= 0 (rem i 5)) (println "buzz")
+    :else (println i)))
+(fizzbuzz 32)
+(first "nick")
+(first "$social")
+(= (first "nick") "n")
+(= (first "nick") \n)
+(defn first-char
+  ""
+  [word]
+  (cond
+    (= (first word) \$) (println "purchase")
+    :else (println "normal word")))
+(first-char "gato")
+(first-char "$social")
+(rest "nick")
+(next "nick"
+)
+(str/split "nick" 1)
+(:require [clojure.string :as str])
+exit
+(in-ns 'nedabase.parsing-methods)
+example-entry
+(rest "$nick")
+(join (rest "$nick"))
+(str/join (rest "$nick"))
+(rest ["hi "bye"])
+(rest '("hi "bye"))
+0
+)
+))
+(rest )
+(rest "hi")
+(rest "hi bye")
+(rest "hi" "bye")
+(rest #{"hi" "bye"})
+(rest ("hi" "bye"))
+(rest ["hi" "bye"])
+(first ["hi" "bye"])
+(defn check-entry
+  ""
+  [entry]
+  (first-char (first entry))
+  (loop [terms]
+    (if (empty? terms)
+      (println "Entry reviewed!")
+      (recur check-entry (rest terms))
+      )))
+(defn check-entry
+  ""
+  [entry]
+  (first-char (first entry))
+  (if (empty? entry)
+    (println "Entry reviewed!")
+    (recur check-entry (rest terms))
+    ))
+(defn check-entry
+  ""
+  [entry]
+  (first-char (first entry))
+  (if (empty? entry)
+    (println "Entry reviewed!")
+    (recur check-entry (rest entry))
+    ))
+(rest [])
+(if (rest []))
+(true? true)
+(true? ["hi"]))
+(defn check-entry
+  ""
+  [entry]
+  (first-char (first entry))
+  (if (empty? (rest entry))
+    (println "Entry reviewed!")
+    (recur check-entry (rest entry))
+    ))
+(defn cfrl
+  [entry]
+  (first-char (first entry))
+  (rest entry))
+(cfrl ["hi" "bye
+"])
+(cfrl ["hi"])
+(defn check-entry
+  ""
+  [entry]
+  (if (empty? entry)
+    (println "Entry reviewed!")
+    (recur check-entry (cfrl entry))
+    ))
+(defn check-entry
+  ""
+  [words]
+  (loop [entry words]
+    (if (empty? entry)
+      (println "Entry reviewed!")
+      (recur check-entry (cfrl entry)))))
+(defn check-entry
+  ""
+  [entry]
+  (first-char (first entry))
+  (if-not (empty? (rest entry))
+    (check-entry (rest entry))))
+(check-entry (str/split example-entry #" "))
+(def example-entry "fhladdsf sdafdsafdsf fdfdsafdsf $klsdff 2939.2 dfalklnlas")
+(def split-entry (str/split example-entry #" "))
+(defn first-char
+  ""
+  [first-word last-words]
+  (cond
+    (= (first term) \$) (purchase-method (str/join (rest first-word)) last-words)
+    (= (first term) \@) (println "person")
+    (= (first term) \#) (println "topic")
+    :else (println "normal word")))
+(defn first-char
+  ""
+  [first-word last-words]
+  (cond
+    (= (first first-word) \$) (purchase-method (str/join (rest first-word)) last-words)
+    (= (first first-word) \@) (println "person")
+    (= (first first-word) \#) (println "topic")
+    :else (println "normal word")))
+(defn check-entry
+  ""
+  [entry]
+  (first-char (first entry) (rest entry))
+  (if-not (empty? (rest entry))
+    (check-entry (rest entry))))
+(def example-entry "fhladdsf sdafdsafdsf fdfdsafdsf $klsdff 2939.2 dfalklnlas")
+(def split-entry (str/split example-entry #" "))
+(check-entry split-entry)
+(split-entry
+)
+(defn first-char
+  ""
+  [entry last-words]
+  (cond
+    (= (first first-word) \$) (purchase-method (str/join (rest first-word)) last-words)
+    (= (first first-word) \@) (println "person")
+    (= (first first-word) \#) (println "topic")
+    :else (println "normal word")))
+(defn first-char
+  ""
+  [first-word last-words]
+  (cond
+    (= (first first-word) \$) (purchase-method (str/join (rest first-word)) last-words)
+    (= (first first-word) \@) (println "person")
+    (= (first first-word) \#) (println "topic")
+    :else (println "normal word")))
+(defn check-entry
+  ""
+  [entry]
+  (first-char (first entry) (rest entry))
+  (if-not (empty? (rest entry))
+    (check-entry (rest entry))))
+(check-entry split-entry)
+(defn purchase-method
+  ""
+  [entry]
+  (println (first entry)))
+(defn first-char
+  ""
+  [entry]
+  (cond
+    (= (first (first entry)) \$) (purchase-method entry)
+    (= (first first-word) \@) (println "person")
+    (= (first first-word) \#) (println "topic")
+    :else (println "normal word")))
+(defn check-entry
+  ""
+  [entry]
+  (first-char entry)
+  (if-not (empty? (rest entry))
+    (check-entry (rest entry))))
+(defn first-char
+  ""
+  [entry]
+  (cond
+    (= (first (first entry)) \$) (purchase-method entry)
+    (= (first (first entry)) \@) (println "person")
+    (= (first (first entry)) \#) (println "topic")
+    :else (println "normal word")))
+(check-entry split-entry)
+(defn purchase-method
+  ""
+  [entry]
+  (cond
+    (>= (count entry) 3) (println (str (first entry) "**" (nth entry 1) "**" (nth entry 2)))
+    (= (count entry) 2) (println (str (first entry) "**" (nth entry 1)))
+    :else "ERROR"))
+(check-entry split-entry)
+(def example-entry "fhladdsf sdafdsafdsf fdfdsafdsf $klsdff 2939.2 dfalklnlas $fds")
+(check-entry split-entry)
+example-entry
+(def split-entry (str/split example-entry #" "))
+(check-entry split-entry)
+(def split-entry (str/split example-entry #" "))
+split-entry
+(check-entry split-entry)
+(defn check-entry
+  ""
+  [entry]
+  (first-char entry)
+  (if-not (empty? entry)
+    (check-entry (rest entry))))
+(def example-entry "fhladdsf sdafdsafdsf fdfdsafdsf $klsdff 2939.2 dfalklnlas $fds")
+(def split-entry (str/split example-entry #" "))
+(check-entry split-entry)
+(defn first-char
+  ""
+  [entry]
+  (cond
+    (= (first (first entry)) \$) (purchase-method entry)
+    (= (first (first entry)) \@) (println "person")
+    (= (first (first entry)) \#) (println "topic")
+    :else (println (first (first entry)))))
+(check-entry split-entry)
+(defn first-char
+  ""
+  [entry]
+  (cond
+    (= (first (first entry)) \$) (purchase-method entry)
+    (= (first (first entry)) \@) (println "person")
+    (= (first (first entry)) \#) (println "topic")
+    :else (println (first entry))))
+(check-entry split-entry)
+(defn check-entry
+  ""
+  [entry]
+  (first-char entry)
+  (if-not (empty? (rest entry))
+(check-entry (rest entry))))
+(check-entry split-entry)
+(defn purchase-method
+  ""
+  [entry]
+  (cond
+    (>= (count entry) 3) (println (str (first entry) "**" (nth entry 1) "**" (nth entry 2)))
+    (= (count entry) 2) (println (str (first entry) "**" (nth entry 1)))
+    :else (println "ERROR")))
+(check-entry split-entry)
+exit
