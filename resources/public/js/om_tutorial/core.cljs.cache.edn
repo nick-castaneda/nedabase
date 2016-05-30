@@ -1,0 +1,2 @@
+;; Analyzed by ClojureScript 1.7.170
+{:name om-tutorial.core, :doc nil, :excludes #{}, :use-macros {defui om.next}, :require-macros {om om.next, om.next om.next, dom om.dom, om.dom om.dom}, :uses nil, :requires {gdom goog.dom, goog.dom goog.dom, om om.next, om.next om.next, dom om.dom, om.dom om.dom}, :imports nil}
