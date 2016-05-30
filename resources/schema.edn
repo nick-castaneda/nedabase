@@ -1,0 +1,38 @@
+[
+  {:db/id #db/id[:db.part/db]
+   :db/ident :entry/text
+   :db/valueType :db.type/string
+   :db/cardinality :db.cardinality/one
+   :db/doc "An entry into the Nedabase"
+   :db.install/_attribute :db.part/db}
+
+
+
+  {:db/id #db/id[:db.part/db]
+   :db/ident :purchase/category
+   :db/valueType :db.type/string
+   :db/cardinality :db.cardinality/one
+   :db/doc "A purchase's category"
+   :db.install/_attribute :db.part/db}
+
+  {:db/id #db/id[:db.part/db]
+   :db/ident :purchase/subcategory
+   :db/valueType :db.type/string
+   :db/cardinality :db.cardinality/one
+   :db/doc "A purchase's sub-category"
+   :db.install/_attribute :db.part/db}
+
+  {:db/id #db/id[:db.part/db]
+   :db/ident :purchase/Cost
+   :db/valueType :db.type/float
+   :db/cardinality :db.cardinality/one
+   :db/doc "The cost of a purchase"
+   :db.install/_attribute :db.part/db}
+
+  {:db/id #db/id[:db.part/db]
+   :db/ident :purchase/entry
+   :db/valueType :db.type/ref
+   :db/cardinality :db.cardinality/one
+   :db/doc "A purchase's related entry"
+   :db.install/_attribute :db.part/db}
+]
