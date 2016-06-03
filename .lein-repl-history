@@ -1,12 +1,3 @@
-    @(d/transact conn [:db/id #db/id[:db.part/user]
-                       :purchase/entry related-entry
-                       :purchase/category purchase-category
-                       :purchase/cost purchase-cost]))
-  ([related-entry purchase-category purchase-cost purchase-subcategory]
-    @(d/transact conn [:db/id #db/id[:db.part/user]
-                       :purchase/entry related-entry
-                       :purchase/category purchase-category
-                       :purchase/cost purchase-cost
                        :purchase/subcategory purchase-subcategory])))
 (defn create-entry
   "Creates an entry in the nedabase"
@@ -497,4 +488,13 @@ exit
 (clear-database)
 (seed-examples)
 exi
+exit
+(in-ns 'nedabase.seed)
+(clear-database)
+(seed-examples)
+exit
+(in-ns 'nedabase.parsing)
+(check-entry "Nick Is chill")
+(check-entry "Nick Is chill" 34234324234234)
+(check-entry "Nick Is chill" "34234324234234")
 exit

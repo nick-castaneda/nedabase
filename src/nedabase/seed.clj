@@ -12,9 +12,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(def example-entries ["supertest $sniooibnwef nosdfsdofni 32.32 sdafdsafdsf fdfdsafdsf dfalklnlas $fds"
-                      "Nick is chill"
-                      "Market visit $asdfdsaf 23"])
+(def example-entries ["I hung out with my bros today and we went to the Virgil $Social bars 32.32 This Friday was chill AF."
+                      "I really like eating churros."
+                      "Grabbed some groceries for work $Food 23"])
 
 (defn seed-examples
   "Post all the example entries"

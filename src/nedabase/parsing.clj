@@ -39,9 +39,9 @@
   ""
   [entry entry-eid]
   (cond
-    (= (first (first entry)) \$) (purchase-function entry entry-eid)
-    (= (first (first entry)) \@) (println "person")
-    (= (first (first entry)) \#) (println "topic")
+    (= (ffirst entry) \$) (purchase-function entry entry-eid)
+    (= (ffirst entry) \@) (println "person")
+    (= (ffirst entry) \#) (println "topic")
     :else (println (first entry))))
 
 (defn check-entry
@@ -49,7 +49,7 @@
   [entry entry-eid]
   (first-char entry entry-eid)
   (if-not (empty? entry)
-    (check-entry (rest entry) entry-eid)
+    (recur (rest entry) entry-eid)
     (println "Done!")))
 
 (defn post-entry
